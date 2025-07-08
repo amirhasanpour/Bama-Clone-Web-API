@@ -3,6 +3,7 @@ package api
 import (
 	"fmt"
 
+	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/middlewares"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/routers"
 	validation "github.com/amirhasanpour/car-sale-management-wep-api/src/api/validations"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
@@ -21,7 +22,7 @@ func InitServer() {
 		val.RegisterValidation("password", validation.PasswordValidator, true)
 	}
 
-	r.Use(gin.Logger(), gin.Recovery())
+	r.Use(gin.Logger(), gin.Recovery(), middlewares.LimitByRequest())
 	
 	api := r.Group("/api")
 
