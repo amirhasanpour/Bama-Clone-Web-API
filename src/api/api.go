@@ -22,6 +22,7 @@ func InitServer() {
 		val.RegisterValidation("password", validation.PasswordValidator, true)
 	}
 
+	r.Use(middlewares.Cors(cfg))
 	r.Use(gin.Logger(), gin.Recovery(), middlewares.LimitByRequest())
 	
 	api := r.Group("/api")
