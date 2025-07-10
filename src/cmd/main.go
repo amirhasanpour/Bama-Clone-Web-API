@@ -9,6 +9,9 @@ import (
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
 )
 
+// @securityDefinitions.apikey AuthBearer
+// @in header
+// @name Authorization
 func main() {
 	cfg := config.GetConfig()
 	

@@ -37,6 +37,16 @@ func (h *TestHandler) Users(c *gin.Context) {
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse("Users", true, 0))
 }
 
+// UserById godoc
+// @Summary UserById
+// @Description UserById
+// @Tags Test
+// @Accept  json
+// @Produce  json
+// @Param id path int true "user id"
+// @Success 200 {object} helper.BaseHttpResponse "Success"
+// @Failure 400 {object} helper.BaseHttpResponse "Failed"
+// @Router /v1/test/user/{id} [get]
 func (h *TestHandler) UserById(c *gin.Context) {
 	id := c.Param("id")
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(gin.H{
@@ -116,6 +126,17 @@ func (h *TestHandler) UriBinder(c *gin.Context) {
 	}, true, 0))
 }
 
+// BodyBinder godoc
+// @Summary BodyBinder
+// @Description BodyBinder
+// @Tags Test
+// @Accept  json
+// @Produce  json
+// @Param person body personData true "person data"
+// @Success 200 {object} helper.BaseHttpResponse{validationErrors=any{}} "Success"
+// @Failure 400 {object} helper.BaseHttpResponse "Failed"
+// @Router /v1/test/binder/body [post]
+// @Security AuthBearer
 func (h *TestHandler) BodyBinder(c *gin.Context) {
 	p := personData{}
 	err := c.ShouldBindJSON(&p)
