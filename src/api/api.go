@@ -57,8 +57,8 @@ func RegisterValidators() {
 }
 
 func RegisterSwagger(r *gin.Engine, cfg *config.Config) {
-	docs.SwaggerInfo.Title = "golang web api"
-	docs.SwaggerInfo.Description = "golang web api"
+	docs.SwaggerInfo.Title = "Microservice Wep API with Monitoring"
+	docs.SwaggerInfo.Description = "REST API documentation for care sale management project"
 	docs.SwaggerInfo.Version = "1.0"
 	docs.SwaggerInfo.BasePath = "/api"
 	docs.SwaggerInfo.Host = fmt.Sprintf("localhost:%s", cfg.Server.Port)
