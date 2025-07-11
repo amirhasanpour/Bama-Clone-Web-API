@@ -8,6 +8,7 @@ import (
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/routers"
 	validation "github.com/amirhasanpour/car-sale-management-wep-api/src/api/validations"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
@@ -26,6 +27,8 @@ func InitServer(cfg *config.Config) {
 	RegisterRoutes(r)
 	RegisterSwagger(r, cfg)
 
+	logger := logging.NewLogger(cfg)
+	logger.Info(logging.General, logging.Startup, "Started", nil)
 	r.Run(fmt.Sprintf(":%s", cfg.Server.Port))
 }
 
