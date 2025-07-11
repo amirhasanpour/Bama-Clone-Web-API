@@ -5,6 +5,7 @@ import (
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/cache"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
+	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db/migrations"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
 )
 
@@ -26,6 +27,7 @@ func main() {
 	if err != nil {
 		logger.Fatal(logging.Postgres, logging.Startup, err.Error(), nil)
 	}
+	migrations.Up_1()
 
 	api.InitServer(cfg)
 }
