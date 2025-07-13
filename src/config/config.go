@@ -17,6 +17,7 @@ type Config struct {
 	Password PasswordConfig
 	Cors     CorsConfig
 	Logger   LoggerConfig
+	Otp 	 OtpConfig
 }
 
 
@@ -68,6 +69,12 @@ type PasswordConfig struct {
 
 type CorsConfig struct {
 	AllowOrigins string
+}
+
+type OtpConfig struct {
+	ExpireTime time.Duration
+	Digits     int
+	Limiter    time.Duration
 }
 
 func GetConfig() *Config{
