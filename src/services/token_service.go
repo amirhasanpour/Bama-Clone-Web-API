@@ -6,6 +6,7 @@ import (
 
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/car-sale-management-wep-api/src/constants"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
 	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/service_errors"
 	"github.com/golang-jwt/jwt"
@@ -41,14 +42,14 @@ func (s *TokenService) GenerateToken(token *tokenDto) (*dto.TokenDetail, error) 
 
 	atc := jwt.MapClaims{}
 
-	atc["user_id"] = token.UserId
-	atc["first_name"] = token.FirstName
-	atc["last_name"] = token.LastName
-	atc["username"] = token.Username
-	atc["email"] = token.Email
-	atc["mobile_number"] = token.MobileNumber
-	atc["roles"] = token.Roles
-	atc["exp"] = td.AccessTokenExpireTime
+	atc[constants.UserIdKey] = token.UserId
+	atc[constants.FirstNameKey] = token.FirstName
+	atc[constants.LastNameKey] = token.LastName
+	atc[constants.UsernameKey] = token.Username
+	atc[constants.EmailKey] = token.Email
+	atc[constants.MobileNumberKey] = token.MobileNumber
+	atc[constants.RolesKey] = token.Roles
+	atc[constants.ExpireTimeKey] = td.AccessTokenExpireTime
 
 	at := jwt.NewWithClaims(jwt.SigningMethodHS256, atc)
 
@@ -61,8 +62,8 @@ func (s *TokenService) GenerateToken(token *tokenDto) (*dto.TokenDetail, error) 
 
 	rtc := jwt.MapClaims{}
 
-	rtc["user_id"] = token.UserId
-	rtc["exp"] = td.RefreshTokenExpireTime
+	rtc[constants.UserIdKey] = token.UserId
+	rtc[constants.ExpireTimeKey] = td.RefreshTokenExpireTime
 
 	rt := jwt.NewWithClaims(jwt.SigningMethodHS256, rtc)
 
