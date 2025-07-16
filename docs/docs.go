@@ -37,7 +37,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateUpdateCountryRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CreateUpdateCountryRequest"
                         }
                     }
                 ],
@@ -47,13 +47,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/helper.BaseHttpResponse"
+                                    "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "result": {
-                                            "$ref": "#/definitions/dto.CountryResponse"
+                                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CountryResponse"
                                         }
                                     }
                                 }
@@ -63,7 +63,7 @@ const docTemplate = `{
                     "400": {
                         "description": "Bad request",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -99,13 +99,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/helper.BaseHttpResponse"
+                                    "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "result": {
-                                            "$ref": "#/definitions/dto.CountryResponse"
+                                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CountryResponse"
                                         }
                                     }
                                 }
@@ -115,7 +115,7 @@ const docTemplate = `{
                     "400": {
                         "description": "Bad request",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -148,7 +148,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.CreateUpdateCountryRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CreateUpdateCountryRequest"
                         }
                     }
                 ],
@@ -158,13 +158,13 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/helper.BaseHttpResponse"
+                                    "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                                 },
                                 {
                                     "type": "object",
                                     "properties": {
                                         "result": {
-                                            "$ref": "#/definitions/dto.CountryResponse"
+                                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CountryResponse"
                                         }
                                     }
                                 }
@@ -174,7 +174,7 @@ const docTemplate = `{
                     "400": {
                         "description": "Bad request",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -206,13 +206,13 @@ const docTemplate = `{
                     "201": {
                         "description": "response",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Bad request",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -235,13 +235,13 @@ const docTemplate = `{
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -272,7 +272,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/handlers.personData"
+                            "$ref": "#/definitions/src_api_handlers.personData"
                         }
                     }
                 ],
@@ -282,7 +282,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/helper.BaseHttpResponse"
+                                    "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                                 },
                                 {
                                     "type": "object",
@@ -296,7 +296,7 @@ const docTemplate = `{
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -342,7 +342,7 @@ const docTemplate = `{
                         "schema": {
                             "allOf": [
                                 {
-                                    "$ref": "#/definitions/helper.BaseHttpResponse"
+                                    "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                                 },
                                 {
                                     "type": "object",
@@ -356,7 +356,7 @@ const docTemplate = `{
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -388,13 +388,13 @@ const docTemplate = `{
                     "200": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -420,7 +420,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.RegisterLoginByMobileRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.RegisterLoginByMobileRequest"
                         }
                     }
                 ],
@@ -428,19 +428,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "409": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -466,7 +466,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.LoginByUsernameRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.LoginByUsernameRequest"
                         }
                     }
                 ],
@@ -474,19 +474,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "409": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -512,7 +512,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.RegisterUserByUsernameRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.RegisterUserByUsernameRequest"
                         }
                     }
                 ],
@@ -520,19 +520,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "409": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -558,7 +558,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.GetOtpRequest"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.GetOtpRequest"
                         }
                     }
                 ],
@@ -566,19 +566,19 @@ const docTemplate = `{
                     "201": {
                         "description": "Success",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "400": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     },
                     "409": {
                         "description": "Failed",
                         "schema": {
-                            "$ref": "#/definitions/helper.BaseHttpResponse"
+                            "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse"
                         }
                     }
                 }
@@ -586,7 +586,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "dto.CountryResponse": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CountryResponse": {
             "type": "object",
             "properties": {
                 "id": {
@@ -597,7 +597,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.CreateUpdateCountryRequest": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.CreateUpdateCountryRequest": {
             "type": "object",
             "required": [
                 "name"
@@ -610,7 +610,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.GetOtpRequest": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.GetOtpRequest": {
             "type": "object",
             "required": [
                 "mobileNumber"
@@ -623,7 +623,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.LoginByUsernameRequest": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.LoginByUsernameRequest": {
             "type": "object",
             "required": [
                 "password",
@@ -640,7 +640,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.RegisterLoginByMobileRequest": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.RegisterLoginByMobileRequest": {
             "type": "object",
             "required": [
                 "mobileNumber",
@@ -659,7 +659,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.RegisterUserByUsernameRequest": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_dto.RegisterUserByUsernameRequest": {
             "type": "object",
             "required": [
                 "firstName",
@@ -690,7 +690,43 @@ const docTemplate = `{
                 }
             }
         },
-        "handlers.personData": {
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_helper.BaseHttpResponse": {
+            "type": "object",
+            "properties": {
+                "error": {},
+                "result": {},
+                "resultCode": {
+                    "type": "integer"
+                },
+                "success": {
+                    "type": "boolean"
+                },
+                "validationErrors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/github_com_amirhasanpour_car-sale-management-wep-api_src_api_validations.ValidationError"
+                    }
+                }
+            }
+        },
+        "github_com_amirhasanpour_car-sale-management-wep-api_src_api_validations.ValidationError": {
+            "type": "object",
+            "properties": {
+                "message": {
+                    "type": "string"
+                },
+                "property": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                }
+            }
+        },
+        "src_api_handlers.personData": {
             "type": "object",
             "required": [
                 "first_name",
@@ -712,42 +748,6 @@ const docTemplate = `{
                     "type": "string",
                     "maxLength": 11,
                     "minLength": 11
-                }
-            }
-        },
-        "helper.BaseHttpResponse": {
-            "type": "object",
-            "properties": {
-                "error": {},
-                "result": {},
-                "resultCode": {
-                    "type": "integer"
-                },
-                "success": {
-                    "type": "boolean"
-                },
-                "validationErrors": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/definitions/validation.ValidationError"
-                    }
-                }
-            }
-        },
-        "validation.ValidationError": {
-            "type": "object",
-            "properties": {
-                "message": {
-                    "type": "string"
-                },
-                "property": {
-                    "type": "string"
-                },
-                "tag": {
-                    "type": "string"
-                },
-                "value": {
-                    "type": "string"
                 }
             }
         }

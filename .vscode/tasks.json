@@ -3,7 +3,7 @@
   "tasks": [
     {
       "label": "swag",
-      "command": "swag init -g src/cmd/main.go",
+      "command": "swag init -g src/cmd/main.go --parseDependency --parseInternal",
       "type": "shell"
     }
   ]
