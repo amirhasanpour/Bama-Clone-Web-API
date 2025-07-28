@@ -87,7 +87,7 @@ func (h *TestHandler) HeaderBinder1(c *gin.Context) {
 
 func (h *TestHandler) HeaderBinder2(c *gin.Context) {
 	header := header{}
-	c.BindHeader(&header)
+	_ = c.BindHeader(&header)
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(gin.H{
 		"result": "HeaderBinder1",
 		"header": header,
@@ -155,7 +155,7 @@ func (h *TestHandler) BodyBinder(c *gin.Context) {
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusBadRequest,
 			helper.GenerateBaseResponseWithValidationError(nil,
-				false, -1, err))
+				false, helper.ValidationError, err))
 		return
 	}
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(gin.H{
@@ -166,7 +166,7 @@ func (h *TestHandler) BodyBinder(c *gin.Context) {
 
 func (h *TestHandler) FormBinder(c *gin.Context) {
 	p := personData{}
-	c.ShouldBind(&p)
+	_ = c.ShouldBind(&p)
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(gin.H{
 		"result": "FormBinder",
 		"person": p,
@@ -178,7 +178,7 @@ func (h *TestHandler) FileBinder(c *gin.Context) {
 	err := c.SaveUploadedFile(file, "file")
 	if err != nil {
 		c.AbortWithStatusJSON(http.StatusInternalServerError,
-			helper.GenerateBaseResponseWithError(nil, false, -1, err))
+			helper.GenerateBaseResponseWithError(nil, false, helper.ValidationError, err))
 		return
 	}
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(gin.H{
