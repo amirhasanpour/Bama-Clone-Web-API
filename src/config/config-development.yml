@@ -20,7 +20,7 @@ postgres:
   connMaxLifetime: 5
 redis:
   host: localhost
-  port: 6379
+  port: 7000
   password: password
   db: 0
   dialTimeout: 5

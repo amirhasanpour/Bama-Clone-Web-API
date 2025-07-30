@@ -128,7 +128,7 @@ services:
       - ./redis/redis.conf:/etc/redis/redis.conf
       - redis:/etc/redis
     ports:
-      - "6379:6379"
+      - "7000:6379"
     networks:
       - webapi_network
 
