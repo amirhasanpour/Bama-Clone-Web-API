@@ -65,6 +65,7 @@ func RegisterRoutes(r *gin.Engine, cfg *config.Config) {
 		carTypes := v1.Group("/car-types", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
 		gearboxes := v1.Group("/gearboxes", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
 		carModels := v1.Group("/car-models", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
+		carModelColors := v1.Group("/car-model-colors", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
 
 		// Test
 		routers.Health(health)
@@ -88,6 +89,7 @@ func RegisterRoutes(r *gin.Engine, cfg *config.Config) {
 		routers.CarType(carTypes, cfg)
 		routers.Gearbox(gearboxes, cfg)
 		routers.CarModel(carModels, cfg)
+		routers.CarModelColor(carModelColors, cfg)
 	}
 
 	v2 := api.Group("/v2")
