@@ -1,5 +1,5 @@
 server:
-  port: 5005
+  port: 8080
   runMode: debug
 logger:
   filePath: ../logs/logs.log
