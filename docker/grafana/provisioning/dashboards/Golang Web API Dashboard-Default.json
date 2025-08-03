@@ -315,7 +315,7 @@
           "refId": "A"
         }
       ],
-      "title": "OS Thread Usage",
+      "title": "Goroutines Usage",
       "type": "stat"
     },
     {
@@ -1003,7 +1003,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Golang Web API Dashboard",
+  "title": "Microservice Wep API Dashboard",
   "uid": "JQu_Xw-Vz",
   "version": 11,
   "weekStart": ""

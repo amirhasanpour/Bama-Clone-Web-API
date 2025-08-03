@@ -135,7 +135,7 @@ func RegisterValidators() {
 }
 
 func RegisterSwagger(r *gin.Engine, cfg *config.Config) {
-	docs.SwaggerInfo.Title = "Microservice Wep API with Monitoring"
+	docs.SwaggerInfo.Title = "Microservice Wep API"
 	docs.SwaggerInfo.Description = "REST API documentation for care sale management project"
 	docs.SwaggerInfo.Version = "1.0"
 	docs.SwaggerInfo.BasePath = "/api"
