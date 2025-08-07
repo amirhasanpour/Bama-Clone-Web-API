@@ -29,7 +29,7 @@ A scalable, observable, and modular RESTful API for managing a car sales platfor
 
 ---
 
-## Used Tools
+## Used Tools:
 
 1. [Gin framework](https://github.com/gin-gonic/gin)
 2. [JWT authentication and authorization](https://github.com/golang-jwt/jwt)
@@ -93,7 +93,9 @@ go run main.go
 
 ### 5- Visit the Application
 
-#### Web API  Run in docker  [http://localhost:10000](http://localhost:10000)
+#### Web API run on  [http://localhost:10000](http://localhost:10000)
+
+#### Swagger on  [http://localhost:10000/swagger/index.html#/](http://localhost:10000/swagger/index.html#/)
 
 ```bash
 Token Url: http://localhost:10000/api/v1/users/login-by-username
@@ -101,30 +103,30 @@ Username: admin
 Password: 12345678
 ```
 
-#### Kibana  [http://localhost:5680](http://localhost:5680)
+#### Kibana on  [http://localhost:5680](http://localhost:5680)
 
 ```bash
 Username: elastic
 Password: changeme
 ```
 
-#### Prometheus  [http://localhost:30090](http://localhost:30090)
+#### Prometheus on  [http://localhost:30090](http://localhost:30090)
 
-#### Grafana  [http://localhost:3000](http://localhost:3000)
+#### Grafana on  [http://localhost:3000](http://localhost:3000)
 
 ```bash
 Username: admin
 Password: foobar
 ```
 
-#### PgAdmin  [http://localhost:8888](http://localhost:8888)
+#### PgAdmin on  [http://localhost:8888](http://localhost:8888)
 
 ```bash
 Username: amirhossinhp10@gmail.com
 Password: admin
 ```
 
-Postgres Server info:
+#### Postgres Server info:
 
 ```bash
 Host: postgres_container
@@ -140,3 +142,21 @@ docker compose -f "docker/docker-compose.yaml" down
 ```
 
 ---
+
+## Project preview
+
+### Swagger
+
+<p align="center"><img src='/files/images/swagger.png' alt='swagger preview' /></p>
+
+### Kibana
+
+<p align="center"><img src='/files/images/kibana.png' alt='kibana preview' /></p>
+
+### Grafana
+
+<p align="center"><img src='/files/images/grafana.png' alt='grafana preview' /></p>
+
+### PgAdmin
+
+<p align="center"><img src='/files/images/pgadmin.png' alt='pgadmin preview' /></p>
