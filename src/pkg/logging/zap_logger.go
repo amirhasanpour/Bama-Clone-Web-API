@@ -3,7 +3,7 @@ package logging
 import (
 	"sync"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"

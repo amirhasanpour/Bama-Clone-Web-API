@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
 	"github.com/gin-gonic/gin"
 )
 

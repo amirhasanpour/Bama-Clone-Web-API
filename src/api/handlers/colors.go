@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/services"
 	"github.com/gin-gonic/gin"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/services"
 )
 
 type ColorHandler struct {
@@ -30,7 +30,7 @@ func NewColorHandler(cfg *config.Config) *ColorHandler {
 // @Router /v1/colors/ [post]
 // @Security AuthBearer
 func (h *ColorHandler) Create(c *gin.Context) {
-	Create(c,h.service.Create)
+	Create(c, h.service.Create)
 }
 
 // UpdateColor godoc
@@ -47,7 +47,7 @@ func (h *ColorHandler) Create(c *gin.Context) {
 // @Router /v1/colors/{id} [put]
 // @Security AuthBearer
 func (h *ColorHandler) Update(c *gin.Context) {
-	Update(c,h.service.Update)
+	Update(c, h.service.Update)
 }
 
 // DeleteColor godoc
@@ -63,7 +63,7 @@ func (h *ColorHandler) Update(c *gin.Context) {
 // @Router /v1/colors/{id} [delete]
 // @Security AuthBearer
 func (h *ColorHandler) Delete(c *gin.Context) {
-	Delete(c,h.service.Delete)
+	Delete(c, h.service.Delete)
 }
 
 // GetColor godoc

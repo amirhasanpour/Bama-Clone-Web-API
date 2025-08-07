@@ -1,13 +1,13 @@
 package helper
 
-import validation "github.com/amirhasanpour/car-sale-management-wep-api/src/api/validations"
+import validation "github.com/amirhasanpour/bama-clone-web-api/src/api/validations"
 
 type BaseHttpResponse struct {
-	Result           any                            `json:"result"`
-	Success          bool                           `json:"success"`
-	ResultCode       ResultCode                     `json:"resultCode"`
-	ValidationErrors *[]validation.ValidationError  `json:"validationErrors"`
-	Error            any                            `json:"error"`
+	Result           any                           `json:"result"`
+	Success          bool                          `json:"success"`
+	ResultCode       ResultCode                    `json:"resultCode"`
+	ValidationErrors *[]validation.ValidationError `json:"validationErrors"`
+	Error            any                           `json:"error"`
 }
 
 func GenerateBaseResponse(result any, success bool, resultCode ResultCode) *BaseHttpResponse {

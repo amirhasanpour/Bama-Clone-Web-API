@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )

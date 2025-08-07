@@ -3,13 +3,13 @@ package api
 import (
 	"fmt"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/docs"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/middlewares"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/routers"
-	validation "github.com/amirhasanpour/car-sale-management-wep-api/src/api/validations"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/metrics"
+	"github.com/amirhasanpour/bama-clone-web-api/docs"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/middlewares"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/routers"
+	validation "github.com/amirhasanpour/bama-clone-web-api/src/api/validations"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/metrics"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/go-playground/validator/v10"
@@ -51,10 +51,10 @@ func RegisterRoutes(r *gin.Engine, cfg *config.Config) {
 		// Test
 		health := v1.Group("/health")
 		test_router := v1.Group("/test" /*middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"})*/)
-		
+
 		// User
 		users := v1.Group("/users")
-		
+
 		// Base
 		countries := v1.Group("/countries", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
 		cities := v1.Group("/cities", middlewares.Authentication(cfg), middlewares.Authorization([]string{"admin"}))
@@ -145,12 +145,12 @@ func RegisterSwagger(r *gin.Engine, cfg *config.Config) {
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
 
-func RegisterPrometheus(){
+func RegisterPrometheus() {
 	err := prometheus.Register(metrics.DbCall)
 	if err != nil {
 		logger.Error(logging.Prometheus, logging.Startup, err.Error(), nil)
 	}
-	
+
 	err = prometheus.Register(metrics.HttpDuration)
 	if err != nil {
 		logger.Error(logging.Prometheus, logging.Startup, err.Error(), nil)

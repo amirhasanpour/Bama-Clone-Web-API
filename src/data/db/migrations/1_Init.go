@@ -3,11 +3,11 @@ package migrations
 import (
 	"time"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/constants"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/models"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/constants"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/db"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/models"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )

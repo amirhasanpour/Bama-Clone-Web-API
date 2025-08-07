@@ -3,11 +3,11 @@ package services
 import (
 	"context"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/models"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/db"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/models"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
 )
 
 type FileService struct {
@@ -18,11 +18,10 @@ func NewFileService(cfg *config.Config) *FileService {
 	return &FileService{
 		base: &BaseService[models.File, dto.CreateFileRequest, dto.UpdateFileRequest, dto.FileResponse]{
 			Database: db.GetDb(),
-			Logger: logging.NewLogger(cfg),
+			Logger:   logging.NewLogger(cfg),
 		},
 	}
 }
-
 
 // Create
 func (s *FileService) Create(ctx context.Context, req *dto.CreateFileRequest) (*dto.FileResponse, error) {

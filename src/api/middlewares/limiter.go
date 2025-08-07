@@ -3,7 +3,7 @@ package middlewares
 import (
 	"net/http"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
 	"github.com/didip/tollbooth"
 	"github.com/gin-gonic/gin"
 )

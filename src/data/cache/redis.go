@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
 	"github.com/go-redis/redis/v7"
 )
 

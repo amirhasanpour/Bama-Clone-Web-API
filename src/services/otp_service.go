@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/constants"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/cache"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/service_errors"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/constants"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/cache"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/service_errors"
 	"github.com/go-redis/redis/v7"
 )
 
@@ -62,7 +62,7 @@ func (s *OtpService) ValidateOtp(mobileNumber string, otp string) error {
 		res.Used = true
 		err = cache.Set(s.redisClient, key, res, s.cfg.Otp.ExpireTime*time.Second)
 		if err != nil {
-		return err
+			return err
 		}
 	}
 	return nil

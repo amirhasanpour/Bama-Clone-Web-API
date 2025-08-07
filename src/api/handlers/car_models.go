@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/services"
 	"github.com/gin-gonic/gin"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/services"
 )
 
 type CarModelHandler struct {

@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/services"
 	"github.com/gin-gonic/gin"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/services"
 )
 
 type PersianYearHandler struct {
@@ -30,7 +30,7 @@ func NewPersianYearHandler(cfg *config.Config) *PersianYearHandler {
 // @Router /v1/years/ [post]
 // @Security AuthBearer
 func (h *PersianYearHandler) Create(c *gin.Context) {
-	Create(c,h.service.Create)
+	Create(c, h.service.Create)
 }
 
 // UpdatePersianYear godoc
@@ -47,7 +47,7 @@ func (h *PersianYearHandler) Create(c *gin.Context) {
 // @Router /v1/years/{id} [put]
 // @Security AuthBearer
 func (h *PersianYearHandler) Update(c *gin.Context) {
-	Update(c,h.service.Update)
+	Update(c, h.service.Update)
 }
 
 // DeletePersianYear godoc
@@ -63,7 +63,7 @@ func (h *PersianYearHandler) Update(c *gin.Context) {
 // @Router /v1/years/{id} [delete]
 // @Security AuthBearer
 func (h *PersianYearHandler) Delete(c *gin.Context) {
-	Delete(c,h.service.Delete)
+	Delete(c, h.service.Delete)
 }
 
 // GetPersianYear godoc

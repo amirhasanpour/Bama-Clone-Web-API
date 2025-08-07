@@ -3,7 +3,7 @@ package helper
 import (
 	"net/http"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/service_errors"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/service_errors"
 )
 
 var StatusCodeMapping = map[string]int{

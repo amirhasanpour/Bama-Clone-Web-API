@@ -3,10 +3,10 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/services"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/services"
 	"github.com/gin-gonic/gin"
 )
 

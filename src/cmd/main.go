@@ -1,12 +1,12 @@
 package main
 
 import (
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/cache"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db/migrations"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/cache"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/db"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/db/migrations"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
 )
 
 // @securityDefinitions.apikey AuthBearer

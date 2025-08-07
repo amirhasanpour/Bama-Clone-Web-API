@@ -1,11 +1,11 @@
 package handlers
 
 import (
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	_ "github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/services"
 	"github.com/gin-gonic/gin"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	_ "github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/services"
 )
 
 type PropertyCategoryHandler struct {
@@ -30,7 +30,7 @@ func NewPropertyCategoryHandler(cfg *config.Config) *PropertyCategoryHandler {
 // @Router /v1/property-categories/ [post]
 // @Security AuthBearer
 func (h *PropertyCategoryHandler) Create(c *gin.Context) {
-	Create(c,h.service.Create)
+	Create(c, h.service.Create)
 }
 
 // UpdatePropertyCategory godoc
@@ -47,7 +47,7 @@ func (h *PropertyCategoryHandler) Create(c *gin.Context) {
 // @Router /v1/property-categories/{id} [put]
 // @Security AuthBearer
 func (h *PropertyCategoryHandler) Update(c *gin.Context) {
-	Update(c,h.service.Update)
+	Update(c, h.service.Update)
 }
 
 // DeletePropertyCategory godoc
@@ -63,7 +63,7 @@ func (h *PropertyCategoryHandler) Update(c *gin.Context) {
 // @Router /v1/property-categories/{id} [delete]
 // @Security AuthBearer
 func (h *PropertyCategoryHandler) Delete(c *gin.Context) {
-	Delete(c,h.service.Delete)
+	Delete(c, h.service.Delete)
 }
 
 // GetPropertyCategory godoc

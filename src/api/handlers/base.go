@@ -5,18 +5,15 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/helper"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/helper"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
 	"github.com/gin-gonic/gin"
 )
 
-
-
 var logger = logging.NewLogger(config.GetConfig())
 
-
-func Create[Ti any,To any](c *gin.Context, caller func(ctx context.Context, req *Ti) (*To, error)) {
+func Create[Ti any, To any](c *gin.Context, caller func(ctx context.Context, req *Ti) (*To, error)) {
 	req := new(Ti)
 	err := c.ShouldBindJSON(&req)
 	if err != nil {
@@ -34,7 +31,7 @@ func Create[Ti any,To any](c *gin.Context, caller func(ctx context.Context, req 
 	c.JSON(http.StatusCreated, helper.GenerateBaseResponse(res, true, helper.Success))
 }
 
-func Update[Ti any,To any](c *gin.Context, caller func(ctx context.Context,id int, req *Ti) (*To, error)) {
+func Update[Ti any, To any](c *gin.Context, caller func(ctx context.Context, id int, req *Ti) (*To, error)) {
 	id, _ := strconv.Atoi(c.Params.ByName("id"))
 	req := new(Ti)
 	err := c.ShouldBindJSON(&req)
@@ -70,7 +67,7 @@ func Delete(c *gin.Context, caller func(ctx context.Context, id int) error) {
 	c.JSON(http.StatusOK, helper.GenerateBaseResponse(nil, true, helper.Success))
 }
 
-func GetById[To any](c *gin.Context,caller func(c context.Context, id int) (*To, error)) {
+func GetById[To any](c *gin.Context, caller func(c context.Context, id int) (*To, error)) {
 	id, _ := strconv.Atoi(c.Params.ByName("id"))
 	if id == 0 {
 		c.AbortWithStatusJSON(http.StatusNotFound,

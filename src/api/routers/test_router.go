@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/handlers"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/handlers"
 	"github.com/gin-gonic/gin"
 )
 

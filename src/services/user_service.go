@@ -1,14 +1,14 @@
 package services
 
 import (
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/api/dto"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/common"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/constants"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/db"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/data/models"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/logging"
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/pkg/service_errors"
+	"github.com/amirhasanpour/bama-clone-web-api/src/api/dto"
+	"github.com/amirhasanpour/bama-clone-web-api/src/common"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/constants"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/db"
+	"github.com/amirhasanpour/bama-clone-web-api/src/data/models"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/logging"
+	"github.com/amirhasanpour/bama-clone-web-api/src/pkg/service_errors"
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"
 )
@@ -243,7 +243,7 @@ func (s *UserService) existsByUsername(username string) (bool, error) {
 		Where("username = ?", username).
 		Find(&exists).
 		Error; err != nil {
-			s.logger.Error(logging.Postgres, logging.Select, err.Error(), nil)
+		s.logger.Error(logging.Postgres, logging.Select, err.Error(), nil)
 		return false, err
 	}
 	return exists, nil

@@ -1,4 +1,4 @@
-module github.com/amirhasanpour/car-sale-management-wep-api
+module github.com/amirhasanpour/bama-clone-web-api
 
 go 1.23.5
 

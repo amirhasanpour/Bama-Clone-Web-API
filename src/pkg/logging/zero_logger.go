@@ -3,7 +3,7 @@ package logging
 import (
 	"os"
 
-	"github.com/amirhasanpour/car-sale-management-wep-api/src/config"
+	"github.com/amirhasanpour/bama-clone-web-api/src/config"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/pkgerrors"
 )
